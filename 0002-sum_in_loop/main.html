@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Task solved !</title>
+  <style>
+  
+  </style>
+</head>
+<body>
+<div>
+  <h3>Sum in Loop</h3>
+  <p>Now our goal is to learn the loops - i.e. repeated actions.</p>
+  <br>
+  <p>input data:</p>
+  <p>10 20 30 40 5 6 7 8</p>
+  <br>
+  <p>answer:</p>
+  <p>126</p>
+  <hr>
+  <br>
+  <input type="text" id="numbers" value="10 20 30 40 5 6 7 8">data for sum
+  <br>
+  <button id="make_calc">Calculate !</button>
+  <br>
+  <p>We get result -></p>
+  
+  <div id="result"></div>
+  <br>
+</div>
+
+<script>
+function qi(a){return document.getElementById(a)}
+
+function task_func(){
+  var input1 = qi("numbers").value;
+  var arr = input1.split(" ");
+  var z = 0;
+  
+  for(var i=0;i < arr.length;i++){
+    z+=parseInt(arr[i]);
+  }
+  qi("result").innerHTML = z;
+}
+
+
+
+window.addEventListener("load", function(){
+  
+  qi("make_calc").addEventListener("click",task_func);
+  task_func();
+  
+  console.log('All ok!');
+});
+</script>
+</body>
+</html>

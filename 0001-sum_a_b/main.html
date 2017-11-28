@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Task solved !</title>
+  <style>
+  
+  </style>
+</head>
+<body>
+<div>
+  <h3>Sum A+B</h3>
+  <p>We need to sum two numbers and tell the result.</p>
+  <br>
+  <p>input data:</p>
+  <p>3 5</p>
+  <br>
+  <p>answer:</p>
+  <p>8</p>
+  <hr>
+  <br>
+  
+  <input type="number" id="number1" step="1" value="3">Int №1
+  <br>
+  <input type="number" id="number2" step="1" value="5">Int №2
+  <br>
+  <button id="make_calc">Calculate !</button>
+  <br>
+  <p>We get result -></p>
+  
+  <div id="result"></div>
+  <br>
+</div>
+<script>
+function qi(a){return document.getElementById(a)}
+
+function is_valid(a){
+  //return Number(a);
+  return parseInt(a);
+}
+
+function task_func(){
+  /*var a = +prompt("Int №1", "");
+  var b = +prompt("Int №2", "");
+  
+  alert( a + b );
+  */
+  var input1 = qi("number1").value;
+  var input2 = qi("number2").value;
+  input1 = is_valid(input1);
+  input2 = is_valid(input2);
+  //var result = input1 + input2;
+  var result = '' + (input1 + input2);
+  qi("result").innerHTML = result;
+}
+
+window.addEventListener("load", function(){
+  
+  qi("make_calc").addEventListener("click",task_func);
+  task_func();
+  
+  console.log('All ok!');
+});
+</script>
+</body>
+</html>
